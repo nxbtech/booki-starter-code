@@ -341,8 +341,15 @@ main {
     margin-bottom: 10px;
     }
     
-    .footer-container p {
-    margin: 10px 0;
+    .footer-container a {
+        display: block;
+        margin: 10px 0;
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    .footer-container a:hover {
+        text-decoration: underline;
     }
     
     @media (max-width: 1024px) {
