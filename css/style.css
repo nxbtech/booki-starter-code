@@ -167,6 +167,21 @@ a {
     background-color: #ccdffc;
 }
 
+/* Styles pour le texte d'information */
+.info-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 10px;
+    clear: both; /* S'assure que le texte est bien à la ligne */
+
+}
+
+.info-text i {
+    margin-right: 5px;
+    color: #0065FC; /* Couleur de l'icône d'information */
+}
 
 /****** Main  ***********/
 main {
