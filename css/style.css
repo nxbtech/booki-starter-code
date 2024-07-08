@@ -5,7 +5,7 @@
 
 :root {
     --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
+    --main-bg-color: #d7D7D7;
     --filter-bg-color: #DEEBFF;
 }
 
@@ -273,7 +273,6 @@ main {
         background-color: #fff;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.1);
         width: 100%; /* Prendre toute la largeur disponible */
         height: 150px; /* Hauteur fixe pour toutes les cartes */
     }
@@ -299,7 +298,8 @@ main {
     #activites-marseille {
         gap: 20px;
         justify-content: space-between;
-        padding: 30px 0;
+        padding: 30px;
+        background-color: #f2f2f2;
     }
     
     #activites-marseille .card {
@@ -316,7 +316,7 @@ main {
     
     /****** Footer ***********/
     #footer {
-    background-color: rgba(170, 170, 170, 0.905);
+    background-color: var(--main-bg-color);;
     color: #000000;
     padding: 20px 0;
     margin-top: 20px;
@@ -362,7 +362,35 @@ main {
         }
     }
     
-    @media (max-width: 767.98px) {
+
+    @media (max-width: 768px) {
+
+        /* Section Title Search */
+        #title-search .search-input-wrapper button {
+            background-color: var(--main-color);
+            color: initial;
+            padding: 10px;
+        }
+    
+        #title-search .search-input-wrapper button::before {
+            content: "\f002"; /* Code unicode pour l'icône de la loupe (FontAwesome) */
+            font-family: "Font Awesome 5 Free"; /* Famille de police pour FontAwesome */
+            font-weight: 900; /* Poids de la police */
+            font-size: 20px; /* Taille de la police */
+            color: #ffffff; /* Couleur de l'icône */
+            display: inline-block; /* Affichage en ligne */
+        }
+    
+        /* Masquer le texte du bouton */
+        #title-search .search-input-wrapper button span {
+            display: none;
+        }
+    
+        /* Section Hébergements */
+        #hebergements {
+            background-color: transparent; 
+        }
+
         #hebergements-and-populaires {
             display: flex;
             flex-direction: column-reverse; /* Mettre populaires au-dessus de hébergements */
@@ -370,5 +398,55 @@ main {
     
         #hebergements, #populaires {
             max-width: 100%; /* Prendre toute la largeur */
+        }
+    
+        #hebergements .cards-container {
+            display: block; /* Empiler les cartes */
+        }
+    
+        #hebergements .card {
+            flex: none;
+            width: 100%; 
+            margin-bottom: 20px;
+            background-color: transparent;
+            box-shadow: none; 
+            border: none; 
+        }
+    
+        /* Sections Activités à Marseille et Les plus populaires */
+        #activites-marseille,
+        #populaires {
+            background-color: transparent; /* Pas de couleur de fond */
+        }
+    
+        #activites-marseille .cards-container,
+        #populaires .cards-container {
+            display: block; /* Empiler les cartes */
+        }
+    
+        #activites-marseille .card,
+        #populaires .card {
+            flex: none; 
+            width: 100%; /* Prendre toute la largeur */
+            margin-bottom: 20px; 
+            background-color: transparent; 
+            box-shadow: none; 
+            border: none; 
+        }
+    
+        /* Navigation Bar */
+        #nav-bar ul li a:hover::before {
+            top: auto; /* Annule la position par défaut */
+            bottom: -5px; 
+        }
+    
+        /* Footer */
+        #footer .footer-container {
+            display: block; /* Empiler les éléments */
+        }
+    
+        #footer .footer-container div {
+            margin-bottom: 20px; 
+            margin-right: 0; 
         }
     }
