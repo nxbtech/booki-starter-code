@@ -7,6 +7,9 @@
         <title>Booki</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
     </head>
 
@@ -25,7 +28,9 @@
             <h2>En plein centre-ville ou en pleine nature</h2>
             <form class="search-bar" method="get" action="/search">
                 <div class="search-input-wrapper">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
                     <input type="text" name="query" placeholder="Marseille, France">
                     <button type="submit"><span>Rechercher</span></button>
                 </div>
@@ -34,14 +39,14 @@
         <section id="filters">
             <h2>Filtres</h2>
             <div class="filter-buttons">
-                <button><i class="fas fa-dollar-sign"></i> Économique</button>
-                <button><i class="fas fa-users"></i> Familial</button>
-                <button><i class="fas fa-heart"></i> Romantique</button>
-                <button><i class="fas fa-gem"></i> Nos pépites</button>
+                <button><i class="fa-solid fa-money-bill-wave"></i> Économique</button>
+                <button><i class="fa-solid fa-person"></i> Familial</button>
+                <button><i class="fa-solid fa-heart"></i> Romantique</button>
+                <button><i class="fa-solid fa-fire"></i> Nos pépites</button>
             </div>
         </section>
         <p class="info-text">
-            <i class="fas fa-info-circle"></i>
+            <span class="circle-info"><i class="fas fa-info"></i></span>
             Plus de 500 logements sont disponibles dans cette ville
         </p>
         <main>
@@ -152,9 +157,13 @@
                             </div>
                         </article>
                     </div>
+                    <a href="#">Afficher Plus</a>
                 </section>
                 <section id="populaires">
-                    <h2>Les plus populaires</h2>
+                    <h2>
+                        Les plus populaires
+                        <i class="fa-solid fa-chart-line"></i>
+                    </h2>
                     <div class="cards-container">
                         <article class="card">
                             <img src="images/hebergements/hotel-le-soleil-du-matin.jpg" alt="Image de l'hôtel Le soleil du matin">
