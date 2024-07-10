@@ -37,9 +37,11 @@ a
 	color: var(--main-bg-color);
 }
 
-body
+body, html 
 {
-	margin: 30px;
+	margin: auto;
+    margin-top: 18px;
+    max-width: 1440px;
 }
 
 /****** Header ***********/
@@ -47,8 +49,9 @@ body
 {
 	display: flex;
 	justify-content: space-between;
-	max-width: 1526px;
-	padding-top: 5px;
+	max-width: 1440px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #nav-bar img
@@ -102,6 +105,7 @@ body
 #title-search
 {
 	margin-top: 50px;
+    margin-left: 20px;
 }
 
 #title-search h2
@@ -115,7 +119,7 @@ body
 {
 	display: flex;
 	justify-content: left;
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 }
 
@@ -187,6 +191,7 @@ body
 	align-items: center;
 	background-color: white;
 	padding: 10px;
+    margin-left: 20px;
 }
 
 #filters h2
@@ -233,6 +238,7 @@ body
 	font-size: 13px;
 	font-weight: bold;
 	margin-right: 8px;
+    margin-left: 20px;
 }
 
 .info-text
@@ -254,6 +260,7 @@ main
 {
 	display: flex;
 	gap: 20px;
+    margin-left: 20px;
 }
 
 #hebergements
@@ -452,7 +459,7 @@ main
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	box-shadow: 10px 10px black;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 #activites-marseille .card img
@@ -521,6 +528,10 @@ main
 
 @media (max-width: 1024px)
 {
+
+    body, html {
+        margin: 18px;
+    }
 	#hebergements-and-populaires
 	{
 		flex-direction: column;
@@ -601,11 +612,17 @@ main
 		width: 100%;
 		overflow-x: hidden;
 	}
+    
+    main {
+        margin-left: 0;
+        padding: ;
+    }
+    
 
 	#populaires, #hebergements, #activites-marseille
 	{
 		width: 100%;
-		margin: 0 auto;
+		margin: 0;
 		padding: 0 15px;
 	}
 
@@ -624,6 +641,7 @@ main
 	{
 		margin: 15px;
 		margin-top: 35px;
+        
 	}
 
 	#title-search .search-input-wrapper
@@ -636,18 +654,22 @@ main
 	#title-search .search-input-wrapper button
 	{
 		background-color: var(--main-color);
-		color: initial;
+        border-radius: 15px;
+        height: 49px;
+        width: 49px;
 	}
 
-	#title-search .search-input-wrapper button::before
+    #title-search .search-input-wrapper button::before
 	{
 		content: "\f002";
 		font-family: "Font Awesome 5 Free";
 		font-weight: 900;
 		font-size: 17px;
 		color: #ffffff;
-		display: inline-block;
+        border-radius: 15px;
 	}
+
+
 
 	#title-search .search-input-wrapper button span
 	{
@@ -659,7 +681,9 @@ main
 		display: flex;
 		justify-content: center;
 		align-items: center;
+        margin-left: 8px;
 	}
+
 
 	#filters h2
 	{
@@ -670,8 +694,7 @@ main
 	{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 20px;
-		margin-left: 10px;
+		margin-bottom: 20px;
 	}
 
 	#filters .filter-buttons button
@@ -727,6 +750,7 @@ main
 	#hebergements-and-populaires
 	{
 		flex-direction: column-reverse;
+        margin-left: 0;
 	}
 
 	#hebergements .cards-container
@@ -741,7 +765,7 @@ main
 		height: 207.25px;
 		margin-bottom: 20px;
 		background-color: white;
-		box-shadow: 10px 10px black;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 		border: none;
 	}
 
@@ -757,7 +781,7 @@ main
 
 	#populaires h2,#hebergements h2,#activites-marseille h2
 	{
-		margin: 30px 0;
+		margin: 15px;
 	}
 
 	#populaires h2
@@ -790,6 +814,7 @@ main
 		height: 200px;
 		width: 315px;
 		margin: 0 auto 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 	}
 
 	#footer .footer-container
